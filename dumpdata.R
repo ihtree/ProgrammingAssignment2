@@ -1,0 +1,61 @@
+testCase <-
+"test for normal case -- cold cache"
+myInputMat <-
+structure(c(-0.247898442105848, -0.774193511767285, -0.786885112019173, 
+-0.379455639449194, -1.13556541680085, -1.02487664775952, 0.420809892576375, 
+-0.89296654390029, 0.132222454217328), .Dim = c(3L, 3L))
+myOutputMatInv <-
+structure(c(12.7576331218445, -9.64045982659297, 1.19880862279768, 
+4.56385947747082, -3.57284997060764, -0.533172864412177, -9.78021779086761, 
+6.55233166723474, 0.146903506672098), .Dim = c(3L, 3L))
+myTestUnitMat <-
+structure(c(1, 0, 0, 0, 1, 0, 0, 0, 1), .Dim = c(3L, 3L))
+isMatInvCached <-
+FALSE
+cacheStatus <-
+"Success: Cache Miss -- Matrix Inverse Solved"
+testCase <-
+"test for warm cache"
+myOutputMatCachedInv <-
+structure(c(12.7576331218445, -9.64045982659297, 1.19880862279768, 
+4.56385947747082, -3.57284997060764, -0.533172864412177, -9.78021779086761, 
+6.55233166723474, 0.146903506672098), .Dim = c(3L, 3L))
+myTestUnitMat <-
+structure(c(1, 0, 0, 0, 1, 0, 0, 0, 1), .Dim = c(3L, 3L))
+isMatInvCached <-
+TRUE
+cacheStatus <-
+"Success: Cache Hit  -- Matrix retrieved from the Cache"
+testCase <-
+"test for cleared cache"
+myOutputMatCachedInv <-
+structure(c(12.7576331218445, -9.64045982659297, 1.19880862279768, 
+4.56385947747082, -3.57284997060764, -0.533172864412177, -9.78021779086761, 
+6.55233166723474, 0.146903506672098), .Dim = c(3L, 3L))
+myTestUnitMat <-
+structure(c(1, 0, 0, 0, 1, 0, 0, 0, 1), .Dim = c(3L, 3L))
+isMatInvCached <-
+FALSE
+cacheStatus <-
+"Success: Cache Miss -- Matrix Inverse Solved"
+testCase <-
+"retest for cold cache"
+myInputMat <-
+structure(c(0.801697215849625, -0.749484981569574, 0.0441726345057932, 
+-0.173451319909244, -0.048151741116656, -0.812366034847714, 0.575198064827568, 
+-0.50983220764651, -0.298097848306158, 0.767415392505073, 0.357470719060281, 
+-0.445051864869358, -0.612405811170205, 1.02501321119939, -1.28559031291519, 
+0.470473330450836), .Dim = c(4L, 4L))
+myOutputMatInv <-
+structure(c(1.10911982065605, -1.01488403532627, 0.411605221310784, 
+-0.301518897861928, 0.101420036008632, -0.830110723311793, 0.739987211022576, 
+-0.162162338145654, -0.92817942039719, -0.642244217644519, -0.0882287703486062, 
+-1.12163023392528, -1.31353657018779, -1.26746688681158, -1.31750994230559, 
+-0.978568432850329), .Dim = c(4L, 4L))
+myTestUnitMat <-
+structure(c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1), .Dim = c(4L, 
+4L))
+isMatInvCached <-
+FALSE
+cacheStatus <-
+"Success: Cache Miss -- Matrix Inverse Solved"
